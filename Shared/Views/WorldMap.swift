@@ -23,11 +23,13 @@ struct WorldMap: View {
         
         Map(coordinateRegion: $region, annotationItems: store.places) { location in
             MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
-                Image(location.country)
-                    .resizable()
-                    .cornerRadius(10)
-                    .frame(width: 80, height: 40)
-                    .shadow(radius: 3)
+                NavigationLink(destination: LocationDetail(location: location)) {
+                    Image(location.country)
+                        .resizable()
+                        .cornerRadius(10)
+                        .frame(width: 80, height: 40)
+                        .shadow(radius: 3)
+                }
             }
         }
             .navigationTitle("Map")
