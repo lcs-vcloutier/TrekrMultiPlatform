@@ -39,8 +39,31 @@ struct LocationDetail: View {
                 Spacer()
             }
             .padding(.horizontal)
-            Text(location.more)
-                .padding([.horizontal, .bottom])
+        
+            // Conditionally show travel advisory
+            if !location.advisory.isEmpty {
+                
+                // Show only the more without bottom padding
+                Text(location.more)
+                    .padding(.horizontal)
+                
+                HStack {
+                Text("Advisory")
+                    .font(.title3)
+                    .bold()
+                    .padding(.vertical)
+                 Spacer()
+                }
+                .padding(.horizontal)
+                
+                Text(location.advisory)
+                    .padding([.horizontal, .bottom])
+                
+            } else {
+                // Show the more with bottom padding
+                Text(location.more)
+                    .padding([.horizontal, .bottom])
+            }
         }
         .navigationTitle(location.name)
     }
