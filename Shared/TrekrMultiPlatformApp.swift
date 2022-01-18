@@ -25,7 +25,7 @@ struct TrekrMultiPlatformApp: App {
                 }
                 
                 NavigationView {
-                    LocationsList(store: store)
+                    WorldMap(store: store)
                 }
                 .tabItem {
                     Image(systemName: "map")
@@ -34,7 +34,7 @@ struct TrekrMultiPlatformApp: App {
                 
                 
                 NavigationView {
-                    LocationsList(store: store)
+                    TipsList()
                 }
                 .tabItem {
                     Image(systemName: "person.fill.questionmark")
