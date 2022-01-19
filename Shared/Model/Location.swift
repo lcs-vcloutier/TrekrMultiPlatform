@@ -17,6 +17,7 @@ struct Location: Decodable, Identifiable, Hashable {
     let longitude: Double
     let heroPicture: String
     let advisory: String
+    let isFavourite: Bool
     
     
     static let example = Location(id: 1,
@@ -27,5 +28,6 @@ struct Location: Decodable, Identifiable, Hashable {
                                   latitude: 57.1200,
                                   longitude: -4.7100,
                                   heroPicture: "highlands",
-                                  advisory: "We accept no liability for any visitors eaten alive by midges.")
+                                  advisory: "We accept no liability for any visitors eaten alive by midges.",
+                                  isFavourite: false)
 }

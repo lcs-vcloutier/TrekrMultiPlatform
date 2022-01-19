@@ -9,7 +9,8 @@
         "longitude": -4.7100,
         "heroPicture": "highlands",
         "pictures": ["photo2", "photo3", "photo4"],
-        "advisory": "We accept no liability for any visitors eaten alive by midges."
+        "advisory": "We accept no liability for any visitors eaten alive by midges.",
+        "isFavourite": true
     },
     {
         "id": 2,
@@ -21,7 +22,8 @@
         "longitude": -83.5070,
         "heroPicture": "smokies",
         "pictures": ["photo1", "photo2", "photo3", "photo4", "photo5", "photo6", "photo7", "photo8"],
-        "advisory": "We accept no liability for any visitors eaten alive by bears."
+        "advisory": "We accept no liability for any visitors eaten alive by bears.",
+        "isFavourite": false
     },
     {
         "id": 3,
@@ -33,7 +35,8 @@
         "longitude": -125.5857,
         "heroPicture": "knight-inlet",
         "pictures": ["photo3", "photo4", "photo5", "photo6", "photo7"],
-        "advisory": ""
+        "advisory": "",
+        "isFavourite": false
     },
     {
         "id": 4,
@@ -45,7 +48,8 @@
         "longitude": 57.4509,
         "heroPicture": "black-river-gorges",
         "pictures": ["photo4", "photo5", "photo6", "photo7", "photo8"],
-        "advisory": ""
+        "advisory": "",
+        "isFavourite": false
     },
     {
         "id": 5,
@@ -57,7 +61,8 @@
         "longitude": 31.6156,
         "heroPicture": "abu-simbel",
         "pictures": ["photo5", "photo6", "photo7", "photo8", "photo1", "photo2", "photo3", "photo4"],
-        "advisory": ""
+        "advisory": "",
+        "isFavourite": false
     },
     {
         "id": 6,
@@ -69,7 +74,8 @@
         "longitude": 10.9916,
         "heroPicture": "verona",
         "pictures": ["photo6", "photo7", "photo8", "photo1", "photo2", "photo3", "photo4"],
-        "advisory": ""
+        "advisory": "",
+        "isFavourite": false
     },
     {
         "id": 7,
@@ -81,7 +87,8 @@
         "longitude": 78.0421,
         "heroPicture": "taj-mahal",
         "pictures": ["photo7", "photo8", "photo1", "photo2", "photo3", "photo4", "photo5", "photo6"],
-        "advisory": ""
+        "advisory": "",
+        "isFavourite": false
     },
     {
         "id": 8,
@@ -93,7 +100,8 @@
         "longitude": 100.3288,
         "heroPicture": "penang",
         "pictures": ["photo8", "photo1", "photo2", "photo3", "photo4"],
-        "advisory": ""
+        "advisory": "",
+        "isFavourite": false
     },
     {
         "id": 9,
@@ -105,7 +113,8 @@
         "longitude": 150.3037,
         "heroPicture": "blue-mountains",
         "pictures": ["photo1", "photo2", "photo3", "photo4", "photo5", "photo6", "photo7", "photo8"],
-        "advisory": "We accept no liability for any visitors eaten alive by drop bears."
+        "advisory": "We accept no liability for any visitors eaten alive by drop bears.",
+        "isFavourite": false
     },
     {
         "id": 10,
@@ -117,6 +126,7 @@
         "longitude": 135.7681,
         "heroPicture": "kyoto",
         "pictures": ["photo2", "photo3", "photo4", "photo5", "photo6", "photo7", "photo8", "photo1"],
-        "advisory": "We accept no liability for any visitors eaten alive by Pokemon."
+        "advisory": "We accept no liability for any visitors eaten alive by Pokemon.",
+        "isFavourite": false
     },
 ]
