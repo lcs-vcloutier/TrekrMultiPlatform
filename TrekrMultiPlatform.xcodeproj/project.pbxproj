@@ -66,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		927FC40327985BDD0049D9D9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9286BB7F279708240081625A /* LocationStore.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		9286BB492797038F0081625A = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +88,8 @@
 			children = (
 				9286BB4F2797038F0081625A /* TrekrMultiPlatformApp.swift */,
 				9286BB6E279703A40081625A /* Model */,
-				9286BB6D2797039F0081625A /* Views */,
+				927FC40327985BDD0049D9D9 /* ViewModel */,
+				9286BB6D2797039F0081625A /* View */,
 				9286BB51279703900081625A /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -103,7 +112,7 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		9286BB6D2797039F0081625A /* Views */ = {
+		9286BB6D2797039F0081625A /* View */ = {
 			isa = PBXGroup;
 			children = (
 				9286BB82279709D00081625A /* LocationsList.swift */,
@@ -111,14 +120,13 @@
 				9286BB8527970CA60081625A /* WorldMap.swift */,
 				9286BB8827970CB10081625A /* TipsList.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		9286BB6E279703A40081625A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				9286BB792797049B0081625A /* Location.swift */,
-				9286BB7F279708240081625A /* LocationStore.swift */,
 				92969349279746B3001F0466 /* Tip.swift */,
 				9286BB74279704400081625A /* locations.json */,
 				9286BB73279704400081625A /* tips.json */,

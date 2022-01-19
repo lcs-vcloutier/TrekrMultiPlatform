@@ -33,11 +33,3 @@ struct LocationsList: View {
         .navigationTitle("Locations")
     }
 }
-
-struct LocationsList_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-        LocationsList(store: testStore)
-        }
-    }
-}

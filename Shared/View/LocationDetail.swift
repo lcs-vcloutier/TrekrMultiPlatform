@@ -68,11 +68,3 @@ struct LocationDetail: View {
         .navigationTitle(location.name)
     }
 }
-
-struct LocationDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            LocationDetail(location: Location.example)
-        }
-    }
-}
