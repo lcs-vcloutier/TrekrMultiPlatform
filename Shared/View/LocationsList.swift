@@ -25,6 +25,12 @@ struct LocationsList: View {
                             Text(location.country)
                                 .font(.subheadline)
                         }
+                        Spacer()
+                        if location.isFavourite == true {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                                .padding()
+                        }
                     }
                 }
             }
@@ -34,7 +40,8 @@ struct LocationsList: View {
         .toolbar {
             ToolbarItem(placement: .automatic) {
                 Toggle(isOn: $favouritesDisplayed, label: {
-                    Image(systemName: "star")
+                    Image(systemName: "star.fill")
+                        .foregroundColor(.yellow)
                 })
                     .toggleStyle(.switch)
                 
