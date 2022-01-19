@@ -8,28 +8,37 @@
 import SwiftUI
 
 struct LocationsList: View {
-    
     @ObservedObject var store: LocationStore
-    
+
+    @State private var searchText = ""
+
     var body: some View {
-        
-        // Iterate over the list locations in the data store
-        List(store.places) { location in
-            // Create a nav link leading to detail view
-            NavigationLink(destination: LocationDetail(location: location)) {
-                HStack {
-                    Image(location.heroPicture)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 44, height: 44)
-                    VStack(alignment: .leading) {
-                        Text(location.name)
-                        Text(location.country)
-                            .font(.subheadline)
+            List {
+                ForEach(searchResults, id: \.name) { location in
+                    NavigationLink(destination: LocationDetail(location: location)) {
+                        HStack {
+                            Image(location.heroPicture)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 44, height: 44)
+                            VStack(alignment: .leading) {
+                                Text(location.name)
+                                Text(location.country)
+                                    .font(.subheadline)
+                            }
+                        }
                     }
                 }
             }
+            .searchable(text: $searchText)
+            .navigationTitle("Locations")
+    }
+
+    var searchResults: [Location] {
+        if searchText.isEmpty {
+            return store.places
+        } else {
+            return store.places.filter {$0.name.contains(searchText) }
         }
-        .navigationTitle("Locations")
     }
 }

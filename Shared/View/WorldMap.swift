@@ -19,8 +19,6 @@ struct WorldMap: View {
     
     var body: some View {
         
-        
-        
         Map(coordinateRegion: $region, annotationItems: store.places) { location in
             MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
                 NavigationLink(destination: LocationDetail(location: location)) {
