@@ -11,18 +11,19 @@ import SwiftUI
 struct TrekrMultiPlatformApp: App {
     
     @StateObject var store = LocationStore()
-    
+    @StateObject var favorites = Favorites()
+
     var body: some Scene {
         WindowGroup {
             
             TabView {
                 NavigationView {
-                    LocationsList(store: store)
+                    LocationsList(favorites: favorites, store: store)
                 }
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Locations")
-                }
+                }.environmentObject(favorites)
                 
                 
                 

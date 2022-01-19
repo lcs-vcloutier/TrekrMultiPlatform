@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LocationsList: View {
+    @ObservedObject var favorites: Favorites
     @ObservedObject var store: LocationStore
     @State private var searchText = ""
     @State private var favouritesDisplayed = false
@@ -26,7 +27,7 @@ struct LocationsList: View {
                                 .font(.subheadline)
                         }
                         Spacer()
-                        if location.isFavourite == true {
+                        if self.favorites.contains(location) {
                             Image(systemName: "star.fill")
                                 .foregroundColor(.yellow)
                                 .padding()
@@ -57,7 +58,7 @@ struct LocationsList: View {
                 return store.places.filter {$0.name.contains(searchText) }
             }
         } else {
-            return store.places.filter {$0.isFavourite == true}
+            return store.places.filter {$0.name.contains(searchText)}
         }
     }
 }
