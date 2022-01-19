@@ -30,6 +30,7 @@ struct WorldMap: View {
                 }
             }
         }
+        .edgesIgnoringSafeArea(.all)
             .navigationTitle("Map")
         
         

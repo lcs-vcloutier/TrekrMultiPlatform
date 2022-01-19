@@ -41,7 +41,6 @@ struct TrekrMultiPlatformApp: App {
                 NavigationView {
                     WorldMap(store: store)
                         .frame(width: 400)
-                        .fixedSize()
                 }
                 .tabItem {
                     Image(systemName: "map")
