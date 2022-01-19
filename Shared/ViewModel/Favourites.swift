@@ -9,7 +9,7 @@ import Foundation
 
 
 class Favorites: ObservableObject {
-    // the actual resorts the user has favorited
+    // the actual locations the user has favorited
      var savedFavourites: Set<String>
 
     // the key we're using to read/write in UserDefaults
@@ -27,19 +27,19 @@ class Favorites: ObservableObject {
         }
     }
 
-    // returns true if our set contains this resort
+    // returns true if our set contains this location
     func contains(_ location: Location) -> Bool {
         savedFavourites.contains("\(location.id)")
     }
 
-    // adds the resort to our set, updates all views, and saves the change
+    // adds the location to our set, updates all views, and saves the change
     func add(_ location: Location) {
         objectWillChange.send()
         savedFavourites.insert("\(location.id)")
         save()
     }
 
-    // removes the resort from our set, updates all views, and saves the change
+    // removes the location from our set, updates all views, and saves the change
     func remove(_ location: Location) {
         objectWillChange.send()
         savedFavourites.remove("\(location.id)")
@@ -48,8 +48,6 @@ class Favorites: ObservableObject {
 
     func save() {
         // write out our data
-//        defaults.set(encoded, forKey: saveKey)
-
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(savedFavourites) {
             defaults.set(encoded, forKey: saveKey)
